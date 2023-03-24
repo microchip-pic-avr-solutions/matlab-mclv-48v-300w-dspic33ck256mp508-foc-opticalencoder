@@ -116,7 +116,7 @@ This document describes the setup requirements for running the Optical Encoder B
       <img  src="images/dem9.png"></p>
     </p>
 
-10.	<p style='text-align: justify;'>If the device is successfully programmed, <b>LED- LD10 and LD11</b> will be blinking.
+10.	<p style='text-align: justify;'>If the device is successfully programmed, <b>LED- LD2 and LD3</b> will be blinking.
 
 11.	<p style='text-align: justify;'>Keep the potentiometer (<b>POT1</b>) position at the middle. Then, to Run the motor, press the push button <b>SW1</b>.
 
