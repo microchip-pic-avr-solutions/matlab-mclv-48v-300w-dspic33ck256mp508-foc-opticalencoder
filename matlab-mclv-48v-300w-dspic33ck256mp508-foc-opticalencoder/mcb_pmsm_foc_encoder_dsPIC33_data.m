@@ -2,7 +2,7 @@
 % Model         :   Field Oriented Control of PMSM Using Optical Encoder
 % Description   :   Set Parameters for FOC of PMSM Using Optical Encoder
 % File name     :   mcb_pmsm_foc_qep_dsPIC33_data.m
-% Copyright 2022 Microchip Technology Inc.
+% Copyright 2023 Microchip Technology Inc.
 
 %% Simulation Parameters
 
@@ -42,19 +42,19 @@ pmsm.T_rated  = (3/2)*pmsm.p*pmsm.FluxPM*pmsm.I_rated;   %Get T_rated from I_rat
 
 %% Inverter parameters
 
-inverter.model         = 'dsPIC33CK_LVMC';          % 		// Manufacturer Model Number
+inverter.model         = 'MCLV-48V-300W';           % 		// Manufacturer Model Number
 inverter.sn            = 'INV_XXXX';         		% 		// Manufacturer Serial Number
 inverter.V_dc          = 24;       					%V      // DC Link Voltage of the Inverter
-inverter.ISenseMax     = 21.85; 					%Amps   // Max current that can be measured
+inverter.ISenseMax     = 22.044; 					%Amps   // Max current that can be measured
 inverter.I_trip        = 10;                  		%Amps   // Max current for trip
 inverter.Rds_on        = 1e-3;                      %Ohms   // Rds ON
-inverter.Rshunt        = 0.01;                      %Ohms   // Rshunt
+inverter.Rshunt        = 0.003;                     %Ohms   // Rshunt
 inverter.R_board       = inverter.Rds_on + inverter.Rshunt/3;  %Ohms
 inverter.MaxADCCnt     = 4095;      				%Counts // ADC Counts Max Value
 inverter.invertingAmp  = -1;                        % 		// Non inverting current measurement amplifier
 inverter.deadtime      = 1e-6;                      %sec    // Deadtime for the PWM 
-inverter.OpampFb_Rf    = 4.02e3;                    %Ohms   // Opamp Feedback resistance for current measurement
-inverter.opampInput_R  = 532;                       %Ohms   // Opamp Input resistance for current measurement
+inverter.OpampFb_Rf    = 4.99e3;                    %Ohms   // Opamp Feedback resistance for current measurement
+inverter.opampInput_R  = 200;                       %Ohms   // Opamp Input resistance for current measurement
 inverter.opamp_Gain    = inverter.OpampFb_Rf/inverter.opampInput_R; % // Opamp Gain used for current measurement
 
 %% Derive Characteristics
